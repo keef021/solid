@@ -1,0 +1,372 @@
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Painel De Administração
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="flex h-screen">
+   <!-- Sidebar -->
+   <div class="bg-black text-white w-64 space-y-6 py-7 px-2">
+    <div class="text-center">
+     <img alt="Logotipo da 324° Lotus Store" class="mx-auto mb-4" height="50" src="https://media.discordapp.net/attachments/1296657986093056044/1348320729808244777/bdj.png?ex=67cf0908&is=67cdb788&hm=3d8638cb9cfa613885b42b04d900ee6b94bdba0dac979991f24044ff3be9eae2&=&format=webp&quality=lossless&width=737&height=737" width="50"/>
+     <h1 class="text-2xl font-bold">
+      Painel De Administração
+     </h1>
+    </div>
+    <nav>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 bg-gray-700 flex justify-between items-center" href="#dashboard">
+      Dashboard
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#produtos">
+      Produtos
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#vendas">
+      Vendas
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#cupons">
+      Cupom
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#galeria">
+      Galeria
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#clientes">
+      Clientes
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#afiliados">
+      Afiliados
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#configuracoes">
+      Configurações
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#plugins">
+      Plugins
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#bot">
+      Bot
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#banidos">
+      Banidos
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#staff">
+      Staff
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#dominio">
+      Domínio
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#pagamentos">
+      Pagamentos
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 flex justify-between items-center" href="#configuracao">
+      Configuração
+      <span class="bg-[#7A1E99] text-white text-xs px-2 py-1 rounded">
+       Atualizando
+      </span>
+     </a>
+     <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="index.html">
+      Voltar
+     </a>
+    </nav>
+   </div>
+   <!-- Main Content -->
+   <div class="flex-1 p-10">
+    <!-- Dashboard Section -->
+    <div id="dashboard">
+     <!-- Financial Metrics -->
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+      <div class="bg-black p-6 rounded-lg shadow-lg">
+       <h2 class="text-xl font-bold mb-2">
+        Dia
+       </h2>
+       <p class="text-2xl">
+        R$ Desativado
+       </p>
+      </div>
+      <div class="bg-black p-6 rounded-lg shadow-lg">
+       <h2 class="text-xl font-bold mb-2">
+        Semana
+       </h2>
+       <p class="text-2xl">
+        R$ Desativado
+       </p>
+      </div>
+      <div class="bg-black p-6 rounded-lg shadow-lg">
+       <h2 class="text-xl font-bold mb-2">
+        Mês
+       </h2>
+       <p class="text-2xl">
+        R$ Desativado
+       </p>
+      </div>
+      <div class="bg-black p-6 rounded-lg shadow-lg">
+       <h2 class="text-xl font-bold mb-2">
+        Total
+       </h2>
+       <p class="text-2xl">
+        R$ Desativado
+       </p>
+      </div>
+     </div>
+     <!-- Main Dashboard Area -->
+     <div class="bg-black p-6 rounded-lg shadow-lg h-96 mb-6">
+      <p class="text-center text-gray-500">
+       Área destinada a gráficos ou estatísticas
+      </p>
+     </div>
+     <!-- Additional Panels -->
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-black p-6 rounded-lg shadow-lg h-48">
+       <p class="text-center text-gray-500">
+        Painel adicional 1
+       </p>
+      </div>
+      <div class="bg-black p-6 rounded-lg shadow-lg h-48">
+       <p class="text-center text-gray-500">
+        Painel adicional 2
+       </p>
+      </div>
+     </div>
+    </div>
+    <!-- Produtos Section -->
+    <div class="hidden" id="produtos">
+     <div class="bg-black p-6 rounded-lg shadow-lg mb-6">
+      <h2 class="text-2xl font-bold mb-4">
+       Produtos
+      </h2>
+      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onclick="toggleProductForm()">
+       Criar Produto
+      </button>
+     </div>
+     <div class="bg-black p-6 rounded-lg shadow-lg mb-6 hidden" id="productForm">
+      <h3 class="text-xl font-bold mb-4">
+       Configurações do Produto
+      </h3>
+      <form id="productConfigForm">
+       <div class="mb-4">
+        <label class="block text-white text-sm font-bold mb-2" for="productName">
+         Nome do Produto
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="productName" name="productName" type="text"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-white text-sm font-bold mb-2" for="productDescription">
+         Descrição do Produto
+        </label>
+        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="productDescription" name="productDescription"></textarea>
+       </div>
+       <div class="mb-4">
+        <label class="block text-white text-sm font-bold mb-2" for="productImage">
+         URL da Imagem do Produto
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="productImage" name="productImage" type="text"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-white text-sm font-bold mb-2" for="productPrice">
+         Valor do Produto
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="productPrice" name="productPrice" type="text"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-white text-sm font-bold mb-2" for="productCoupon">
+         Ativar Cupom
+        </label>
+        <div class="flex items-center">
+         <input class="mr-2 leading-tight" id="productCouponYes" name="productCoupon" type="radio" value="Sim"/>
+         <span class="text-sm">
+          Sim
+         </span>
+        </div>
+        <div class="flex items-center">
+         <input class="mr-2 leading-tight" id="productCouponNo" name="productCoupon" type="radio" value="Não"/>
+         <span class="text-sm">
+          Não
+         </span>
+        </div>
+       </div>
+       <button class="bg-white text-black px-4 py-2 rounded hover:bg-gray-300" onclick="saveProductConfig(event)">
+        Salvar Configurações
+       </button>
+      </form>
+     </div>
+     <div class="bg-black p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-4">
+       Lista de Produtos
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="productList">
+      </div>
+     </div>
+    </div>
+    <!-- Cupons Section -->
+    <div class="hidden" id="cupons">
+     <div class="bg-black p-6 rounded-lg shadow-lg mb-6">
+      <h2 class="text-2xl font-bold mb-4">
+       Cupons
+      </h2>
+      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" onclick="toggleCouponForm()">
+       Criar Cupom
+      </button>
+     </div>
+     <div class="bg-black p-6 rounded-lg shadow-lg mb-6 hidden" id="couponForm">
+      <h3 class="text-xl font-bold mb-4">
+       Configurações do Cupom
+      </h3>
+      <form id="couponConfigForm">
+       <div class="mb-4">
+        <label class="block text-white text-sm font-bold mb-2" for="couponName">
+         Nome do Cupom
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="couponName" name="couponName" type="text"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-white text-sm font-bold mb-2" for="couponDiscount">
+         Porcentagem de Desconto
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="couponDiscount" name="couponDiscount" type="text"/>
+       </div>
+       <button class="bg-white text-black px-4 py-2 rounded hover:bg-gray-300" onclick="saveCouponConfig(event)">
+        Salvar Configurações
+       </button>
+      </form>
+     </div>
+     <div class="bg-black p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-4">
+       Lista de Cupons
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="couponList">
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Footer -->
+  <div class="fixed bottom-0 right-0 p-4">
+   <p class="text-gray-500">
+    BDJ PRODUCTIONS
+   </p>
+  </div>
+  <script>
+   function toggleProductForm() {
+            const form = document.getElementById('productForm');
+            form.classList.toggle('hidden');
+        }
+
+        function saveProductConfig(event) {
+            event.preventDefault();
+            const productName = document.getElementById('productName').value;
+            const productDescription = document.getElementById('productDescription').value;
+            const productImage = document.getElementById('productImage').value;
+            const productPrice = document.getElementById('productPrice').value;
+            const productCoupon = document.querySelector('input[name="productCoupon"]:checked').value;
+
+            const productList = document.getElementById('productList');
+            const newProduct = document.createElement('div');
+            newProduct.classList.add('bg-gray-800', 'p-4', 'rounded-lg', 'shadow');
+
+            newProduct.innerHTML = `
+                <img src="${productImage}" alt="Imagem de ${productName}" class="w-full h-32 object-cover mb-4" height="200" width="300"/>
+                <h4 class="text-lg font-bold mb-2">${productName}</h4>
+                <p class="text-gray-300 mb-2">${productDescription}</p>
+                <p class="text-gray-300 mb-2">Valor: R$ ${productPrice}</p>
+                <p class="text-gray-300 mb-2">Cupom Ativado: ${productCoupon}</p>
+                <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700" onclick="addToStore('${productName}', '${productDescription}', '${productImage}', '${productPrice}', '${productCoupon}')">Adicionar à Loja</button>
+                <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 mt-2" onclick="deleteProduct(this)">Excluir Produto</button>
+            `;
+
+            productList.appendChild(newProduct);
+
+            // Save to localStorage
+            const products = JSON.parse(localStorage.getItem('products')) || [];
+            products.push({
+                name: productName,
+                description: productDescription,
+                image: productImage,
+                price: productPrice,
+                coupon: productCoupon
+            });
+            localStorage.setItem('products', JSON.stringify(products));
+
+            // Clear form
+            document.getElementById('productConfigForm').reset();
+            toggleProductForm();
+        }
+
+        function deleteProduct(button) {
+            const product = button.parentElement;
+            product.remove();
+        }
+
+        function addToStore(name, description, image, price, coupon) {
+            const storeProducts = JSON.parse(localStorage.getItem('storeProducts')) || [];
+            storeProducts.push({ name, description, image, price, coupon });
+            localStorage.setItem('storeProducts', JSON.stringify(storeProducts));
+            alert('Produto adicionado à loja!');
+        }
+
+        function toggleCouponForm() {
+            const form = document.getElementById('couponForm');
+            form.classList.toggle('hidden');
+        }
+
+        function saveCouponConfig(event) {
+            event.preventDefault();
+            const couponName = document.getElementById('couponName').value;
+            const couponDiscount = document.getElementById('couponDiscount').value;
+
+            const couponList = document.getElementById('couponList');
+            const newCoupon = document.createElement('div');
+           
