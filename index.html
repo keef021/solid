@@ -115,7 +115,7 @@
     <div class="flex items-center space-x-4">
       <div class="relative">
         <i class="fas fa-headset text-xl cursor-pointer" id="support-button"></i>
-        <a href="https://discord.gg/sWgNvESYzc" target="_blank" class="hidden absolute top-8 left-0 bg-white text-black p-1 rounded font-bold flex items-center space-x-1" id="support-link-button">
+        <a href="https://discord.gg/sWgNvESYzc" target="_blank" class="absolute top-10 left-0 bg-white text-black p-1 rounded font-bold flex items-center space-x-1 text-xs hidden" id="support-link-button">
           <i class="fab fa-discord"></i>
           <span>Suporte</span>
           <i class="fas fa-external-link-alt"></i>
@@ -204,7 +204,7 @@
   </div>
   <!-- Login Modal -->
   <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" id="login-modal">
-    <div class="bg-gray-800 p-4 rounded w-11/12 md:w-1/3">
+    <div class="bg-black p-4 rounded w-11/12 md:w-1/3 border border-white">
       <div class="flex justify-between items-center">
         <h2 class="text-xl font-bold">Login</h2>
         <button class="text-white" id="close-login-modal"><i class="fas fa-times"></i></button>
@@ -212,13 +212,16 @@
       <form class="mt-4">
         <div class="mb-4">
           <label class="block text-sm font-bold mb-2" for="login-email">Email</label>
-          <input class="w-full p-2 rounded bg-gray-700 text-white" id="login-email" type="email"/>
+          <input class="w-full p-2 rounded bg-black text-white border border-white" id="login-email" type="email"/>
         </div>
         <div class="mb-4">
           <label class="block text-sm font-bold mb-2" for="login-password">Senha</label>
-          <input class="w-full p-2 rounded bg-gray-700 text-white" id="login-password" type="password"/>
+          <input class="w-full p-2 rounded bg-black text-white border border-white" id="login-password" type="password"/>
         </div>
-        <button class="bg-green-500 text-white p-2 rounded w-full hover:bg-green-600 transition duration-300 ease-in-out" type="submit">Entrar</button>
+        <button class="bg-white text-black p-2 rounded w-full hover:bg-gray-200 transition duration-300 ease-in-out flex items-center justify-center space-x-2" type="submit">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Entrar</span>
+        </button>
       </form>
     </div>
   </div>
@@ -248,7 +251,7 @@
   </div>
   <!-- Admin Modal -->
   <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" id="admin-modal">
-    <div class="bg-gray-800 p-4 rounded w-11/12 md:w-1/3">
+    <div class="bg-black p-4 rounded w-11/12 md:w-1/3 border border-white">
       <div class="flex justify-between items-center">
         <h2 class="text-xl font-bold">Painel de Administração</h2>
         <button class="text-white" id="close-admin-modal"><i class="fas fa-times"></i></button>
@@ -256,13 +259,16 @@
       <form class="mt-4" id="admin-login-form">
         <div class="mb-4">
           <label class="block text-sm font-bold mb-2" for="admin-email">Email</label>
-          <input class="w-full p-2 rounded bg-gray-700 text-white" id="admin-email" type="email"/>
+          <input class="w-full p-2 rounded bg-black text-white border border-white" id="admin-email" type="email"/>
         </div>
         <div class="mb-4">
           <label class="block text-sm font-bold mb-2" for="admin-password">Senha</label>
-          <input class="w-full p-2 rounded bg-gray-700 text-white" id="admin-password" type="password"/>
+          <input class="w-full p-2 rounded bg-black text-white border border-white" id="admin-password" type="password"/>
         </div>
-        <button class="bg-green-500 text-white p-2 rounded w-full hover:bg-green-600 transition duration-300 ease-in-out" type="submit">Entrar</button>
+        <button class="bg-white text-black p-2 rounded w-full hover:bg-gray-200 transition duration-300 ease-in-out flex items-center justify-center space-x-2" type="submit">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Entrar</span>
+        </button>
       </form>
     </div>
   </div>
@@ -289,6 +295,3 @@
       <p>© 2025 bdj productions. Todos os direitos reservados</p>
       <p class="text-right">bdj productions</p>
     </div>
-  </footer>
-</body>
-</html>
