@@ -1,103 +1,136 @@
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BDJ PRODUCTIONS</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const searchInput = document.getElementById('search-input');
-      const productCards = document.querySelectorAll('.product-card');
-      const supportButton = document.getElementById('support-button');
-      const supportLinkButton = document.getElementById('support-link-button');
-      const loginButton = document.getElementById('login-button');
-      const loginModal = document.getElementById('login-modal');
-      const closeLoginModal = document.getElementById('close-login-modal');
-      const cartButton = document.getElementById('cart-button');
-      const cartModal = document.getElementById('cart-modal');
-      const closeCartModal = document.getElementById('close-cart-modal');
-      const adminButton = document.getElementById('admin-button');
-      const adminModal = document.getElementById('admin-modal');
-      const closeAdminModal = document.getElementById('close-admin-modal');
-      const adminLoginForm = document.getElementById('admin-login-form');
-      const discordIcon = document.getElementById('discord-icon');
-      const searchModal = document.getElementById('search-modal');
-      const closeSearchModal = document.getElementById('close-search-modal');
-      const searchResults = document.getElementById('search-results');
-
-      searchInput.addEventListener('input', function() {
-        const query = searchInput.value.toLowerCase();
-        searchResults.innerHTML = ''; // Clear previous results
-        productCards.forEach(card => {
-          const title = card.querySelector('.product-title').textContent.toLowerCase();
-          if (title.includes(query)) {
-            const clonedCard = card.cloneNode(true);
-            clonedCard.classList.add('w-full', 'max-w-xs', 'mb-4');
-            searchResults.appendChild(clonedCard);
-          }
-        });
-        searchModal.classList.remove('hidden');
-      });
-
-      closeSearchModal.addEventListener('click', function() {
-        searchModal.classList.add('hidden');
-      });
-
-      supportButton.addEventListener('click', function() {
-        supportLinkButton.classList.toggle('hidden');
-      });
-
-      loginButton.addEventListener('click', function() {
-        loginModal.classList.remove('hidden');
-        document.body.classList.add('backdrop-blur');
-      });
-
-      closeLoginModal.addEventListener('click', function() {
-        loginModal.classList.add('hidden');
-        document.body.classList.remove('backdrop-blur');
-      });
-
-      cartButton.addEventListener('click', function() {
-        cartModal.classList.remove('hidden');
-        document.body.classList.add('backdrop-blur');
-      });
-
-      closeCartModal.addEventListener('click', function() {
-        cartModal.classList.add('hidden');
-        document.body.classList.remove('backdrop-blur');
-      });
-
-      adminButton.addEventListener('click', function() {
-        adminModal.classList.remove('hidden');
-        document.body.classList.add('backdrop-blur');
-      });
-
-      closeAdminModal.addEventListener('click', function() {
-        adminModal.classList.add('hidden');
-        document.body.classList.remove('backdrop-blur');
-      });
-
-      adminLoginForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        window.location.href = 'admin.html';
-      });
-
-      discordIcon.addEventListener('click', function() {
-        window.location.href = 'https://discord.gg/sWgNvESYzc';
-      });
-
-      productCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-          card.classList.add('border-2', 'border-white');
-        });
-        card.addEventListener('mouseleave', function() {
-          card.classList.remove('border-2', 'border-white');
-        });
-      });
-    });
-  </script>
+  <style>
+    .footer-container {
+      width: 100%;
+      max-width: 800px;
+      background-color: #000000;
+      border-radius: 12px;
+      border: 1px solid #121212;
+      padding: 20px 30px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    
+    .footer-logo-section {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    
+    .logo {
+      width: 32px;
+      height: 32px;
+      background-color: #00AA00;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 8px;
+    }
+    
+    .logo-letter {
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    .company-name {
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    
+    .slogan {
+      color: #AAAAAA;
+      font-size: 14px;
+    }
+    
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    
+    .footer-social {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    
+    .social-text {
+      color: #AAAAAA;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    
+    .discord-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #222222;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .divider {
+      width: 100%;
+      height: 1px;
+      background-color: #181818;
+      margin: 15px 0;
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .copyright {
+      color: #999999;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .powered-by {
+      color: #999999;
+      font-size: 12px;
+    }
+    
+    .ereemby {
+      color: #999999;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  </style>
 </head>
 <body class="bg-black text-white font-roboto min-h-screen flex flex-col">
   <!-- Header -->
@@ -273,25 +306,25 @@
     </div>
   </div>
   <!-- Footer -->
-  <footer class="bg-black p-2">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <div class="flex items-center space-x-2">
-        <img alt="Logo da BDJ Productions com a bandeira do Brasil" height="50" src="https://media.discordapp.net/attachments/1296657986093056044/1348320729808244777/bdj.png?ex=67cf0908&is=67cdb788&hm=3d8638cb9cfa613885b42b04d900ee6b94bdba0dac979991f24044ff3be9eae2&=&format=webp&quality=lossless&width=737&height=737" width="50"/>
-        <span class="text-xl font-bold">bdj productions</span>
+  <div class="footer-container mx-auto">
+    <div class="footer-top">
+      <div class="footer-logo-section">
+        <div class="logo-container">
+          <div class="logo">
+            <span class="logo-letter">L</span>
+          </div>
+          <span class="company-name">BDJ PRODUCTIONS</span>
+        </div>
+        <span class="slogan">The Best Solutions</span>
       </div>
-      <p class="text-sm">The Best Productions</p>
-    </div>
-    <div class="mt-2">
-      <h3 class="text-md font-bold">Políticas</h3>
-      <ul class="text-xs">
-        <li>Políticas de Cookies</li>
-      </ul>
-    </div>
-    <div class="mt-2 flex items-center space-x-2">
-      <span class="text-xs">Confira nossas redes sociais</span>
-      <i class="fab fa-discord text-xl cursor-pointer" id="discord-icon"></i>
-    </div>
-    <div class="mt-2 text-xs text-gray-400">
-      <p>© 2025 bdj productions. Todos os direitos reservados</p>
-      <p class="text-right">bdj productions</p>
-    </div>
+      
+      <div class="footer-links">
+        <a href="#" class="footer-link">Políticas</a>
+        <a href="#" class="footer-link">Políticas de Cookies</a>
+      </div>
+      
+      <div class="footer-social">
+        <span class="social-text">Confira nossas redes sociais</span>
+        <div class="discord-icon">
+          <svg width="22" height="22" viewBox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1
